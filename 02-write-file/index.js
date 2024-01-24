@@ -7,7 +7,7 @@ const { stdin, stdout } = process;
 
 stdout.write('Приветик!\n');
 stdin.on('data', (data) => {
-  if (data.toString() === 'exit\n') {
+  if (data.toString().trim() === 'exit') {
     handleExit();
   }
   output.write(data);
